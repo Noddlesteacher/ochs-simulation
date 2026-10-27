@@ -19,6 +19,17 @@ will have the same tables or figures.
 
 ## Run the complete reproduction
 
+Clone the repository and enter its directory:
+
+```bash
+git clone https://github.com/Noddlesteacher/ochs-simulation.git
+cd ochs-simulation
+```
+
+You can also use GitHub's **Code > Download ZIP**, extract the archive, and
+open the extracted directory. While the repository is private, access requires
+the owner's or an authorized collaborator's GitHub account.
+
 Use Python **3.13.0**. From the repository directory, create a separate Python
 environment and install the versions listed in `requirements.txt`:
 

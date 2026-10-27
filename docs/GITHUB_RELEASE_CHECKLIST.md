@@ -2,7 +2,8 @@
 
 Current preparation: 26 October 2026. The complete reproduction has passed,
 and its evidence is included in `validation/`. This checklist covers the
-remaining publication process; the repository has not yet been published.
+remaining public-release process. The repository is privately hosted at
+https://github.com/Noddlesteacher/ochs-simulation and has not been made public.
 
 ## Before publication
 
