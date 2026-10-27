@@ -27,8 +27,8 @@ cd ochs-simulation
 ```
 
 You can also use GitHub's **Code > Download ZIP**, extract the archive, and
-open the extracted directory. While the repository is private, access requires
-the owner's or an authorized collaborator's GitHub account.
+open the extracted directory. The repository is public; downloading the code
+does not require a collaborator invitation.
 
 Use Python **3.13.0**. From the repository directory, create a separate Python
 environment and install the versions listed in `requirements.txt`:

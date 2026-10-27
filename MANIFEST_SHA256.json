@@ -7,8 +7,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14428,
-      "sha256": "961dcd6de7ded3251b6376b6066c2ea77c2a8e72cddf496986e3ee9e871f352b"
+      "bytes": 14410,
+      "sha256": "f16ff6b87d6cef643cb49c5f7d224c42f6db91942154a83fc0128eb2a607bb13"
     },
     {
       "path": "RECOVERY_README_ZH.md",
@@ -172,8 +172,8 @@
     },
     {
       "path": "docs/GITHUB_RELEASE_CHECKLIST.md",
-      "bytes": 1922,
-      "sha256": "c872cfca260e28245d82835e1615166d5aa2b24718fb54a34e75b0e9c71668ed"
+      "bytes": 1971,
+      "sha256": "4e7efd258eb5d403308918958b1868951c49c0ffb01c64fc98d44ab163a429ea"
     },
     {
       "path": "docs/SCORING_GUIDE.md",
@@ -537,8 +537,8 @@
     },
     {
       "path": "阅读说明.txt",
-      "bytes": 1481,
-      "sha256": "a2917c002bb60eed02d13e80580fbae3d0b5c45655baca52af866950308c0375"
+      "bytes": 1493,
+      "sha256": "6edd63b7b873491714d28fe20f18521d188b55b896d1caa1c4dedcab8aeb4a1b"
     }
   ]
 }

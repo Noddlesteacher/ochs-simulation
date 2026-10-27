@@ -20,5 +20,5 @@
 本副本只更新发布说明及附上核验记录，Python 代码和 seed 没有改动。
 没有在这个改名目录中再启动一次全量模拟。
 
-GitHub 私有仓库：https://github.com/Noddlesteacher/ochs-simulation
-目前没有公开。许可证和最终署名仍需作者确认。
+GitHub 公开仓库：https://github.com/Noddlesteacher/ochs-simulation
+读者可直接查看和下载。许可证和最终署名仍需作者确认。
