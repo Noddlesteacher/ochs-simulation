@@ -1,0 +1,158 @@
+rename from simulation/method3/__init__.py
+rename to simulation/scoring_backend/__init__.py
+content unchanged
+
+rename from simulation/method3/blockdiag.py
+rename to simulation/scoring_backend/blockdiag.py
+content unchanged
+
+rename from simulation/method3/counts.py
+rename to simulation/scoring_backend/counts.py
+content unchanged
+
+rename from simulation/method3/hybrid.py
+rename to simulation/scoring_backend/hybrid.py
+content unchanged
+
+rename from simulation/method3/iblocks.py
+rename to simulation/scoring_backend/iblocks.py
+content unchanged
+
+rename from simulation/method3/ochs_v81.py
+rename to simulation/scoring_backend/ochs_v81.py
+content unchanged
+
+rename from simulation/method3/ochs_v81_exact_numeric.py
+rename to simulation/scoring_backend/ochs_v81_exact_numeric.py
+content unchanged
+
+rename from simulation/method3/ochs_v81_exact_suffix.py
+rename to simulation/scoring_backend/ochs_v81_exact_suffix.py
+content unchanged
+
+rename from simulation/method3/ochs_v81_stage2a.py
+rename to simulation/scoring_backend/ochs_v81_stage2a.py
+content unchanged
+
+rename from simulation/method3/states.py
+rename to simulation/scoring_backend/states.py
+content unchanged
+
+--- previous/VALIDATION.md
++++ renamed/VALIDATION.md
+@@ -1,4 +1,13 @@
+ # Validation status — 25 October 2026
++
++## Scoring-library directory rename
++
++`simulation/method3/` is now `simulation/scoring_backend/`. Only the directory
++name, nine import paths in four callers, and the scoring-guide references were
++changed. The ten moved library files are byte-identical to their originals.
++Historical QA records retain their original paths; checks/BACKEND_RENAME.json
++records the path mapping, source comparison and current check scope. No full
++simulation was run, and the end-to-end validation limitation below still applies.
+ 
+ ## Public-name edition
+ 
+--- previous/docs/SCORING_GUIDE.md
++++ renamed/docs/SCORING_GUIDE.md
+@@ -13,8 +13,8 @@
+ 
+ Read:
+ 
+-- simulation/method3/ochs_v81.py: augmented_transition_counts
+-- simulation/method3/ochs_v81_exact_numeric.py: exact_augmented_count_weight
++- simulation/scoring_backend/ochs_v81.py: augmented_transition_counts
++- simulation/scoring_backend/ochs_v81_exact_numeric.py: exact_augmented_count_weight
+ - simulation/ranks.py: encode, decode, relation
+ 
+ ## 2. The terminal-anchor blocks
+@@ -30,8 +30,8 @@
+ 
+ Read:
+ 
+-- simulation/method3/iblocks.py: decompose_i_blocks
+-- simulation/method3/ochs_v81_exact_suffix.py:
++- simulation/scoring_backend/iblocks.py: decompose_i_blocks
++- simulation/scoring_backend/ochs_v81_exact_suffix.py:
+   _suffix_histogram_from_values, conservative_block_diagnostic_exact_suffix
+ - simulation/iblock.py: pair_tally
+ 
+@@ -57,14 +57,17 @@
+ If a sign cannot be certified within the numerical budget, it stops. It does
+ not invent an epsilon tie.
+ 
+-Read simulation/method3/ochs_v81_exact_numeric.py: compare_exact_scores.
++Read simulation/scoring_backend/ochs_v81_exact_numeric.py: compare_exact_scores.
+ The usual manuscript entry is prepare_exact_score in ochs_v81_stage2a.py,
+ then relation and ranks in simulation/ranks.py.
+ 
+ ## Why the backend retains historical filenames
+ 
+-The method3 directory is the existing numerical library, preserved for
+-traceability. Its module names are not the manuscript's section numbers.
++The scoring_backend directory (previously named method3) is the existing
++numerical library, preserved for traceability. Only its directory name and
++import paths changed; the ten library files retain their original bytes.
++Old names within historical docstrings and audit records are retained, as is
++the original diagnostic salt. Its module names are not the manuscript's section numbers.
+ Some files also retain historical helpers (rounded-score routines, smoothed
+ counts, or permutation sampling). Those are **not called by this paper's
+ production path**. The functions identified above are the applicable path.
+--- previous/simulation/fixed_prediction.py
++++ renamed/simulation/fixed_prediction.py
+@@ -4,12 +4,12 @@
+ from .settings import A, HS, LS, MODEL as REF_MODEL
+ from .storage import require, digest
+ from . import ranks as rr, iblock as baseline
+-from .method3.ochs_v81_stage2a import (
++from .scoring_backend.ochs_v81_stage2a import (
+     prepare_exact_score as prepare,
+     ExactScoreCache as Cache,
+ )
+-from .method3.hybrid import history_group as group
+-from .method3.ochs_v81 import legal_candidates as candidates
++from .scoring_backend.hybrid import history_group as group
++from .scoring_backend.ochs_v81 import legal_candidates as candidates
+ 
+ 
+ def reference_view(visible, h):
+--- previous/simulation/iblock.py
++++ renamed/simulation/iblock.py
+@@ -3,8 +3,8 @@
+ from fractions import Fraction
+ from math import factorial
+ from .storage import canon as canonical, require
+-from .method3.ochs_v81_stage2a import ExactScoreCache, _validated_episode
+-from .method3.ochs_v81 import legal_candidates
++from .scoring_backend.ochs_v81_stage2a import ExactScoreCache, _validated_episode
++from .scoring_backend.ochs_v81 import legal_candidates
+ 
+ NAMESPACE = "OCHS_SINGLE_PATH_IBLOCK_TIE_V1"
+ 
+--- previous/simulation/ochs.py
++++ renamed/simulation/ochs.py
+@@ -4,9 +4,9 @@
+ from .settings import A, MODEL_ID, LAMBDAS
+ from .storage import require
+ from . import ranks as rr
+-from .method3.ochs_v81_stage2a import prepare_exact_score, ExactScoreCache
+-from .method3.hybrid import history_group
+-from .method3.ochs_v81 import legal_candidates
++from .scoring_backend.ochs_v81_stage2a import prepare_exact_score, ExactScoreCache
++from .scoring_backend.hybrid import history_group
++from .scoring_backend.ochs_v81 import legal_candidates
+ 
+ 
+ def validate_visible(obj, adjacency):
+--- previous/simulation/ranks.py
++++ renamed/simulation/ranks.py
+@@ -3,7 +3,7 @@
+ from fractions import Fraction
+ from functools import cmp_to_key
+ from .storage import require
+-from .method3.ochs_v81_exact_numeric import (
++from .scoring_backend.ochs_v81_exact_numeric import (
+     compare_exact_scores,
+     ExactScoreComponents,
+     ExactCountWeight,

@@ -1,0 +1,32 @@
+test_aggregation_identities (tests.unit_checks.ExactChecks.test_aggregation_identities) ... ok
+test_degenerate_randomized_tie (tests.unit_checks.ExactChecks.test_degenerate_randomized_tie) ... ok
+test_exhausted_tape_fails (tests.unit_checks.ExactChecks.test_exhausted_tape_fails) ... ok
+test_geometric_support_and_split (tests.unit_checks.ExactChecks.test_geometric_support_and_split) ... ok
+test_invalid_tally_fails (tests.unit_checks.ExactChecks.test_invalid_tally_fails) ... ok
+test_small_block_oracle (tests.unit_checks.ExactChecks.test_small_block_oracle) ... ok
+test_strict_threshold (tests.unit_checks.ExactChecks.test_strict_threshold) ... ok
+test_transition_boundaries (tests.unit_checks.ExactChecks.test_transition_boundaries) ... ok
+test_exact_large_integer_roundtrip (tests.unit_checks.ImmutableStorageChecks.test_exact_large_integer_roundtrip) ... ok
+test_failed_task_never_replaced (tests.unit_checks.ImmutableStorageChecks.test_failed_task_never_replaced) ... ok
+test_candidate_order_fails (tests.unit_checks.KeyedComparisonChecks.test_candidate_order_fails) ... ok
+test_changed_alpha_fails (tests.unit_checks.KeyedComparisonChecks.test_changed_alpha_fails) ... ok
+test_changed_method_fails (tests.unit_checks.KeyedComparisonChecks.test_changed_method_fails) ... ok
+test_changed_number_fails (tests.unit_checks.KeyedComparisonChecks.test_changed_number_fails) ... ok
+test_duplicate_fails (tests.unit_checks.KeyedComparisonChecks.test_duplicate_fails) ... ok
+test_extra_fails (tests.unit_checks.KeyedComparisonChecks.test_extra_fails) ... ok
+test_missing_fails (tests.unit_checks.KeyedComparisonChecks.test_missing_fails) ... ok
+test_reordered_rows_pass (tests.unit_checks.KeyedComparisonChecks.test_reordered_rows_pass) ... ok
+test_disk_gate_does_not_launch_computation (tests.test_entrypoint.EntryPointChecks.test_disk_gate_does_not_launch_computation) ... ok
+test_failure_stops_without_substitution (tests.test_entrypoint.EntryPointChecks.test_failure_stops_without_substitution) ... ok
+test_full_stage_order_and_new_data_paths (tests.test_entrypoint.EntryPointChecks.test_full_stage_order_and_new_data_paths) ... ok
+test_fixed_history_study_keeps_original_worker_identity_and_seed (tests.test_study_names.StudyNameChecks.test_fixed_history_study_keeps_original_worker_identity_and_seed) ... ok
+test_help_uses_public_names (tests.test_study_names.StudyNameChecks.test_help_uses_public_names) ... ok
+test_main_study_keeps_original_worker_identity_and_seed (tests.test_study_names.StudyNameChecks.test_main_study_keeps_original_worker_identity_and_seed) ... ok
+test_mapping_retains_original_identifiers (tests.test_study_names.StudyNameChecks.test_mapping_retains_original_identifiers) ... ok
+test_no_launch_without_full_study_flag (tests.test_study_names.StudyNameChecks.test_no_launch_without_full_study_flag) ... ok
+test_old_labels_are_not_public_cli_choices (tests.test_study_names.StudyNameChecks.test_old_labels_are_not_public_cli_choices) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.077s
+
+OK

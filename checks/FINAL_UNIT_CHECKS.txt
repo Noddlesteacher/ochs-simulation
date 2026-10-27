@@ -1,0 +1,23 @@
+test_aggregation_identities (__main__.ExactChecks.test_aggregation_identities) ... ok
+test_degenerate_randomized_tie (__main__.ExactChecks.test_degenerate_randomized_tie) ... ok
+test_exhausted_tape_fails (__main__.ExactChecks.test_exhausted_tape_fails) ... ok
+test_geometric_support_and_split (__main__.ExactChecks.test_geometric_support_and_split) ... ok
+test_invalid_tally_fails (__main__.ExactChecks.test_invalid_tally_fails) ... ok
+test_small_block_oracle (__main__.ExactChecks.test_small_block_oracle) ... ok
+test_strict_threshold (__main__.ExactChecks.test_strict_threshold) ... ok
+test_transition_boundaries (__main__.ExactChecks.test_transition_boundaries) ... ok
+test_exact_large_integer_roundtrip (__main__.ImmutableStorageChecks.test_exact_large_integer_roundtrip) ... ok
+test_failed_task_never_replaced (__main__.ImmutableStorageChecks.test_failed_task_never_replaced) ... ok
+test_candidate_order_fails (__main__.KeyedComparisonChecks.test_candidate_order_fails) ... ok
+test_changed_alpha_fails (__main__.KeyedComparisonChecks.test_changed_alpha_fails) ... ok
+test_changed_method_fails (__main__.KeyedComparisonChecks.test_changed_method_fails) ... ok
+test_changed_number_fails (__main__.KeyedComparisonChecks.test_changed_number_fails) ... ok
+test_duplicate_fails (__main__.KeyedComparisonChecks.test_duplicate_fails) ... ok
+test_extra_fails (__main__.KeyedComparisonChecks.test_extra_fails) ... ok
+test_missing_fails (__main__.KeyedComparisonChecks.test_missing_fails) ... ok
+test_reordered_rows_pass (__main__.KeyedComparisonChecks.test_reordered_rows_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.031s
+
+OK

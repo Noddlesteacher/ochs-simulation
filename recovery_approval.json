@@ -1,0 +1,44 @@
+{
+  "run_name": "OCHS_REPRODUCED_20261025_163634",
+  "h": 9,
+  "panel": "FORMAL_001479",
+  "completed_counts": {
+    "3": 5000,
+    "6": 5000,
+    "9": 1479
+  },
+  "evidence": {
+    "main_study/panels/h9/FORMAL_001479/generation.json.gz": {
+      "sha256": "78f223c53a6c8be13bda9a716dbb778c0a98fe4163e7f594d05512aa4c3c8aa6",
+      "bytes": 157498
+    },
+    "main_study/panels/h9/FORMAL_001479/uniforms.json.gz.pending": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "main_study/panels/h9/FORMAL_001479/visible.json.gz": {
+      "sha256": "efe68578e7ff6a6192dadc21146900ebc6eab5f89a9d01cf7b2ece6a25cacce9",
+      "bytes": 3278
+    },
+    "main_study/panels/h9/FORMAL_001479/truth.json.gz": {
+      "sha256": "9c7ba7b995fbd5303b78afb089dcd14705da306f0607631a7eac75c71370018d",
+      "bytes": 91
+    },
+    "main_study/panels/h9/FORMAL_001479/RESOURCE_RECORD.json": {
+      "sha256": "4194fa80938eafc40f67a6635233fc212d69c504a7fffbf3e7035fbfe2a0cd4a",
+      "bytes": 128
+    },
+    "main_study/logs/h9/FORMAL_001479.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "main_study/REPRODUCTION_IDENTITY.json": {
+      "sha256": "c2cdb8aef3bf24de38b767a36494210e06a996ad12d09e8918c03f7e69520bfa",
+      "bytes": 2695
+    },
+    "PIPELINE_STOPPED.json": {
+      "sha256": "2b98be1c0a5cbfd095a22a4bc1618e6e078a9a831d868159c394b382a9521815",
+      "bytes": 554
+    }
+  }
+}

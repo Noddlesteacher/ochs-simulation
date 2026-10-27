@@ -1,0 +1,36 @@
+\begin{table}[!htbp]
+\centering
+\caption{Selected reference counts and full prediction sets in the
+main simulation study.}
+\label{tab:reference-availability}
+\begingroup
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.09}
+\begin{tabular}{@{}rrrrrrr@{}}
+\toprule
+& & \multicolumn{2}{c}{Mean $N_*$}
+& \multicolumn{1}{c}{90\% nominal}
+& \multicolumn{2}{c}{95\% nominal} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-5}\cmidrule(lr){6-7}
+$h$ & G1 targets & G1 & G0 & Full (\%)
+& Forced full (\%) & Full (\%) \\
+\midrule
+3 & 706 & 27.19 & 171.68 & 5.38 & 2.55 & 30.74 \\
+6 & 672 & 26.60 & 172.46 & 0.15 & 4.91 & 8.63 \\
+9 & 639 & 25.97 & 173.23 & 0.00 & 5.79 & 5.95 \\
+\bottomrule
+\end{tabular}
+\par\vspace{5pt}
+\begin{minipage}{0.97\linewidth}
+\footnotesize
+$N_*$ is the number of selected same-group references; G1 targets
+is the number of all-state-1 targets among 5,000 replicates per
+horizon. Full-set frequencies are for OCHS in group~1, where all
+three weights give identical sets. Forced full denotes $N_*\le18$
+at 95\% nominal coverage. No group~1 replicate was forced to return
+a full set at 90\% nominal coverage ($N_*\le8$). Percentages use
+the corresponding G1 target counts as denominators.
+\end{minipage}
+\endgroup
+\end{table}

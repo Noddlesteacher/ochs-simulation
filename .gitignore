@@ -1,0 +1,17 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.DS_Store
+OCHS_REPRODUCED_*/
+OCHS_CHECK_*/
+*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+.env
+.env.*
+outputs/

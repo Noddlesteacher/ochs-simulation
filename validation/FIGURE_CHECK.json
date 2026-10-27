@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "figures": [
+    {
+      "figure": "reliability_lambda090_main.pdf",
+      "reference_sha256": "d9fe25de8c5e4738bc1f0cbd7b3baef7cfaf5fe86c1d48efb69d207e695d5ef8",
+      "rebuilt_sha256": "cc3f09bf7e48d342ae1c4e142fc5a60ec5cae3b4e2ff25a5aaf01bf3b0bc40cc",
+      "page_size_points": [
+        0.0,
+        0.0,
+        405.0,
+        446.3999938964844
+      ],
+      "page_dimensions_equal": true,
+      "renders": [
+        {
+          "dpi": 144,
+          "dimensions_equal": true,
+          "different_pixels": 0,
+          "pixel_count": 723330
+        },
+        {
+          "dpi": 288,
+          "dimensions_equal": true,
+          "different_pixels": 0,
+          "pixel_count": 2893320
+        }
+      ],
+      "pass": true
+    },
+    {
+      "figure": "step6_length_performance_nominal90.pdf",
+      "reference_sha256": "ff3a0554c4ccd87816e6a76822f4dd905dd04edbf9977b5173fa2cfe00d40823",
+      "rebuilt_sha256": "644152f64392d0514fab8acee4c866729ed58653dab20810937b662840c7fc64",
+      "page_size_points": [
+        0.0,
+        0.0,
+        928.4581298828125,
+        519.375
+      ],
+      "page_dimensions_equal": true,
+      "renders": [
+        {
+          "dpi": 144,
+          "dimensions_equal": true,
+          "different_pixels": 0,
+          "pixel_count": 1929423
+        },
+        {
+          "dpi": 288,
+          "dimensions_equal": true,
+          "different_pixels": 0,
+          "pixel_count": 7717692
+        }
+      ],
+      "pass": true
+    },
+    {
+      "figure": "step6_h6_state_composition_nominal80.pdf",
+      "reference_sha256": "7ee7034f976cbc03ede776b8bb996a9e6d12643be917d9ff7f112d2849613ee6",
+      "rebuilt_sha256": "7ee7034f976cbc03ede776b8bb996a9e6d12643be917d9ff7f112d2849613ee6",
+      "page_size_points": [
+        0.0,
+        0.0,
+        405.0,
+        252.0
+      ],
+      "page_dimensions_equal": true,
+      "renders": [
+        {
+          "dpi": 144,
+          "dimensions_equal": true,
+          "different_pixels": 0,
+          "pixel_count": 408240
+        },
+        {
+          "dpi": 288,
+          "dimensions_equal": true,
+          "different_pixels": 0,
+          "pixel_count": 1632960
+        }
+      ],
+      "pass": true
+    },
+    {
+      "figure": "step6_h6_state_composition_nominal90.pdf",
+      "reference_sha256": "6698504ead7544a73d37f79b28edf5c393e1cceaa588a6f4fb42323bd1bb1562",
+      "rebuilt_sha256": "6698504ead7544a73d37f79b28edf5c393e1cceaa588a6f4fb42323bd1bb1562",
+      "page_size_points": [
+        0.0,
+        0.0,
+        405.0,
+        252.0
+      ],
+      "page_dimensions_equal": true,
+      "renders": [
+        {
+          "dpi": 144,
+          "dimensions_equal": true,
+          "different_pixels": 0,
+          "pixel_count": 408240
+        },
+        {
+          "dpi": 288,
+          "dimensions_equal": true,
+          "different_pixels": 0,
+          "pixel_count": 1632960
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "renderer": "1.26.7",
+  "scope": "Four standalone author-supplied PDF figures; not a full manuscript LaTeX compilation",
+  "comparison": "Exact RGB pixels at 144 and 288 dpi; no tolerance; PDF timestamps excluded"
+}

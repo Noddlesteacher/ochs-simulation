@@ -1,0 +1,42 @@
+\begin{table}[H]
+\centering
+\caption{Mean prediction-set sizes at 95\% nominal coverage in the
+main simulation study.}
+\label{tab:results-size-95}
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.07}
+\textbf{Panel A: Group 1 (all-state-1 histories)}\\[3pt]
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+$h$ & Targets & OCHS (all weights) & Randomized $i$-block \\
+\midrule
+3 & 706 & 3.262 & 6.788 \\
+6 & 672 & 21.851 & 50.443 \\
+9 & 639 & 118.851 & 392.574 \\
+\bottomrule
+\end{tabular}
+\par\vspace{9pt}
+\textbf{Panel B: Group 0 (other histories)}\\[3pt]
+\begin{tabular}{@{}rrrrrr@{}}
+\toprule
+$h$ & Targets & OCHS $0.90$ & Count-only & OCHS $0.50$ & Randomized $i$-block \\
+\midrule
+3 & 4,294 & 1.707 & 1.690 & 2.333 & 6.535 \\
+6 & 4,328 & 9.643 & 9.834 & 17.546 & 47.587 \\
+9 & 4,361 & 37.852 & 36.217 & 114.871 & 355.473 \\
+\bottomrule
+\end{tabular}
+\par\vspace{5pt}
+\begin{minipage}{0.97\linewidth}
+\footnotesize
+Targets is the number of replicates in the indicated history group
+out of 5,000 at each horizon. All three OCHS specifications use the
+same augmented transition-count score in group~1. In Panel B,
+OCHS headings indicate $\lambda$; count-only uses $\lambda=1$.
+The $i$-block benchmark uses randomized ties. Mean sizes include
+empty prediction sets.
+\end{minipage}
+\endgroup
+\end{table}

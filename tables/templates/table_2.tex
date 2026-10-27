@@ -1,0 +1,55 @@
+\begin{table}[!htbp]
+\centering
+\caption{Mean prediction-set sizes in the main simulation study at
+80\% and 90\% nominal coverage.}
+\label{tab:results-size}
+\begingroup
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.08}
+
+\textbf{Panel A: Group 1 (all-state-1 histories)}\\[3pt]
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+$h$ & Nominal & Targets & OCHS (all weights) & Randomized $i$-block \\
+\midrule
+3 & 80\% & 706 & 1.000 & 5.540 \\
+3 & 90\% & 706 & 1.397 & 6.319 \\
+\addlinespace[3pt]
+6 & 80\% & 672 & 1.092 & 39.540 \\
+6 & 90\% & 672 & 6.455 & 45.626 \\
+\addlinespace[3pt]
+9 & 80\% & 639 & 2.244 & 309.718 \\
+9 & 90\% & 639 & 25.734 & 357.272 \\
+\bottomrule
+\end{tabular}
+
+\par\vspace{10pt}
+\textbf{Panel B: Group 0 (other histories)}\\[3pt]
+\begin{tabular}{@{}rrrrrrr@{}}
+\toprule
+$h$ & Nominal & Targets & OCHS $0.90$ & Count-only
+    & OCHS $0.50$ & Randomized $i$-block \\
+\midrule
+3 & 80\% & 4,294 & 0.877 & 0.878 & 0.880 & 4.799 \\
+3 & 90\% & 4,294 & 1.042 & 1.041 & 1.091 & 5.869 \\
+\addlinespace[3pt]
+6 & 80\% & 4,328 & 0.889 & 0.889 & 0.883 & 28.923 \\
+6 & 90\% & 4,328 & 1.935 & 1.857 & 4.460 & 39.360 \\
+\addlinespace[3pt]
+9 & 80\% & 4,361 & 0.926 & 0.918 & 0.958 & 197.585 \\
+9 & 90\% & 4,361 & 6.822 & 6.707 & 36.082 & 284.220 \\
+\bottomrule
+\end{tabular}
+
+\par\vspace{6pt}
+\begin{minipage}{0.97\linewidth}
+\footnotesize
+Each horizon has 5,000 replicates and 200 countries per replicate.
+Targets is the number of replicates in the indicated group. The
+three OCHS specifications coincide in group~1. OCHS column headings
+in Panel B indicate $\lambda$. Means include empty sets; methods
+are compared at common nominal coverage levels.
+\end{minipage}
+\endgroup
+\end{table}

@@ -1,0 +1,1205 @@
+{
+  "status": "PASS",
+  "tables": [
+    {
+      "table": 1,
+      "numeric_rows": 3,
+      "numeric_cells": 12,
+      "byte_identical_to_author_table": true,
+      "sha256": "541d4d9b5e7a6890a3b3c0612c61c9eea2aededc95ac2c43ca2f7e692d1cdd12"
+    },
+    {
+      "table": 2,
+      "numeric_rows": 12,
+      "numeric_cells": 72,
+      "byte_identical_to_author_table": true,
+      "sha256": "a2a436df5668809222b03a3c54ac797069c06ac605e6eb9a45825b24a3dfbe5c"
+    },
+    {
+      "table": 3,
+      "numeric_rows": 3,
+      "numeric_cells": 21,
+      "byte_identical_to_author_table": true,
+      "sha256": "e9f535246ea65bee6482a8a7b9d4e968948d6c4bfd87a18a3f373d39a472ba20"
+    },
+    {
+      "table": 4,
+      "numeric_rows": 12,
+      "numeric_cells": 96,
+      "byte_identical_to_author_table": true,
+      "sha256": "b589a4b330813b0fad17ebf0ab7dcc19877e365f796b9aced31ed266b05300a0"
+    },
+    {
+      "table": 5,
+      "numeric_rows": 6,
+      "numeric_cells": 30,
+      "byte_identical_to_author_table": true,
+      "sha256": "d6fe37e1c34638da49101cbcbc262a2f0f820792a5f4717ba80b114220928073"
+    },
+    {
+      "table": 6,
+      "numeric_rows": 9,
+      "numeric_cells": 99,
+      "byte_identical_to_author_table": true,
+      "sha256": "00a8301a5429cd6c4b6ed88ef3dba2781abcb09a2806c562387318e2955ffb40"
+    },
+    {
+      "table": 7,
+      "numeric_rows": 6,
+      "numeric_cells": 48,
+      "byte_identical_to_author_table": true,
+      "sha256": "f5999881090d265432303fb82f81c5bbd614d1e4c0c99e640df28e74acbf23e9"
+    }
+  ],
+  "source_rows": [
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G1",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G1",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G1",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G1",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G1",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G1",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G1",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G1",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G1",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G1",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G1",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G1",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "count",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "ochs050",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "count",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "ochs050",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "count",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "ochs050",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "count",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "ochs050",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "count",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "ochs050",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "count",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "ochs050",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G1",
+        "ochs090",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G1",
+        "randomized_iblock",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G1",
+        "ochs090",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G1",
+        "randomized_iblock",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G1",
+        "ochs090",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G1",
+        "randomized_iblock",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "ochs090",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "count",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "ochs050",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G0",
+        "randomized_iblock",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "ochs090",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "count",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "ochs050",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G0",
+        "randomized_iblock",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "ochs090",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "count",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "ochs050",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G0",
+        "randomized_iblock",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/REFERENCE_AVAILABILITY.csv",
+      "key": [
+        3,
+        "G1",
+        1
+      ]
+    },
+    {
+      "file": "step5/REFERENCE_AVAILABILITY.csv",
+      "key": [
+        3,
+        "G0",
+        1
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G1",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "3",
+        "G1",
+        "ochs090",
+        "1"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "10",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "10",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "10",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "10",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "50",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "50",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "50",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "50",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "100",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "100",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "100",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "100",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "200",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "200",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "200",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "3",
+        "200",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/PAIRED_METHOD_CONTRASTS.csv",
+      "key": [
+        "3",
+        "G0",
+        "ochs090-minus-count",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/PAIRED_METHOD_CONTRASTS.csv",
+      "key": [
+        "3",
+        "G0",
+        "ochs090-minus-count",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/PAIRED_METHOD_CONTRASTS.csv",
+      "key": [
+        "3",
+        "G0",
+        "ochs090-minus-count",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/REFERENCE_AVAILABILITY.csv",
+      "key": [
+        6,
+        "G1",
+        1
+      ]
+    },
+    {
+      "file": "step5/REFERENCE_AVAILABILITY.csv",
+      "key": [
+        6,
+        "G0",
+        1
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G1",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "6",
+        "G1",
+        "ochs090",
+        "1"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "10",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "10",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "10",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "10",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "50",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "50",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "50",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "50",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "100",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "100",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "100",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "100",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "200",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "200",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "200",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "6",
+        "200",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/PAIRED_METHOD_CONTRASTS.csv",
+      "key": [
+        "6",
+        "G0",
+        "ochs090-minus-count",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/PAIRED_METHOD_CONTRASTS.csv",
+      "key": [
+        "6",
+        "G0",
+        "ochs090-minus-count",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/PAIRED_METHOD_CONTRASTS.csv",
+      "key": [
+        "6",
+        "G0",
+        "ochs090-minus-count",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/REFERENCE_AVAILABILITY.csv",
+      "key": [
+        9,
+        "G1",
+        1
+      ]
+    },
+    {
+      "file": "step5/REFERENCE_AVAILABILITY.csv",
+      "key": [
+        9,
+        "G0",
+        1
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G1",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/SUMMARY_BY_H_GROUP_ALPHA.csv",
+      "key": [
+        "9",
+        "G1",
+        "ochs090",
+        "1"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "10",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "10",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "10",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "10",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "50",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "50",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "50",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "50",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "100",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "100",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "100",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "100",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "200",
+        "ochs090",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "200",
+        "randomized_iblock",
+        "4"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "200",
+        "ochs090",
+        "2"
+      ]
+    },
+    {
+      "file": "step6/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv",
+      "key": [
+        "9",
+        "200",
+        "randomized_iblock",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/PAIRED_METHOD_CONTRASTS.csv",
+      "key": [
+        "9",
+        "G0",
+        "ochs090-minus-count",
+        "4"
+      ]
+    },
+    {
+      "file": "step5/PAIRED_METHOD_CONTRASTS.csv",
+      "key": [
+        "9",
+        "G0",
+        "ochs090-minus-count",
+        "2"
+      ]
+    },
+    {
+      "file": "step5/PAIRED_METHOD_CONTRASTS.csv",
+      "key": [
+        "9",
+        "G0",
+        "ochs090-minus-count",
+        "1"
+      ]
+    },
+    {
+      "file": "step5/COVERAGE_DIAGNOSTICS_114.csv",
+      "key": [
+        "6",
+        "G0",
+        "11"
+      ]
+    },
+    {
+      "file": "step5/COVERAGE_DIAGNOSTICS_114.csv",
+      "key": [
+        "6",
+        "G0",
+        "10"
+      ]
+    },
+    {
+      "file": "step5/COVERAGE_DIAGNOSTICS_114.csv",
+      "key": [
+        "6",
+        "G0",
+        "9"
+      ]
+    },
+    {
+      "file": "step5/COVERAGE_DIAGNOSTICS_114.csv",
+      "key": [
+        "6",
+        "G0",
+        "8"
+      ]
+    },
+    {
+      "file": "step5/COVERAGE_DIAGNOSTICS_114.csv",
+      "key": [
+        "9",
+        "G0",
+        "7"
+      ]
+    },
+    {
+      "file": "step5/COVERAGE_DIAGNOSTICS_114.csv",
+      "key": [
+        "9",
+        "G0",
+        "6"
+      ]
+    }
+  ]
+}

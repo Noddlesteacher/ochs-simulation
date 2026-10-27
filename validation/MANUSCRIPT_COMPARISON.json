@@ -1,0 +1,1097 @@
+{
+  "source": "external manuscript PDF (identified by source_sha256; not distributed here)",
+  "source_sha256": "66fe0b65cbb8a52474950b5d2ae27f877ca827c7e7d2c164c4dec1e7a8c9898f",
+  "page_count": 22,
+  "reproduction": "completed_reproduction",
+  "figures": [
+    {
+      "figure": 1,
+      "manuscript_page": 13,
+      "reference": "completed_reproduction/paper/figures/reliability_lambda090_main.pdf",
+      "reference_sha256": "cc3f09bf7e48d342ae1c4e142fc5a60ec5cae3b4e2ff25a5aaf01bf3b0bc40cc",
+      "drawing_stream_identical": true,
+      "renders": [
+        {
+          "dpi": 144,
+          "different_pixels": 0,
+          "pixels": 723330
+        },
+        {
+          "dpi": 288,
+          "different_pixels": 0,
+          "pixels": 2893320
+        }
+      ],
+      "pass": true
+    },
+    {
+      "figure": 2,
+      "manuscript_page": 18,
+      "reference": "completed_reproduction/paper/figures/step6_length_performance_nominal90.pdf",
+      "reference_sha256": "644152f64392d0514fab8acee4c866729ed58653dab20810937b662840c7fc64",
+      "drawing_stream_identical": true,
+      "renders": [
+        {
+          "dpi": 144,
+          "different_pixels": 0,
+          "pixels": 1929423
+        },
+        {
+          "dpi": 288,
+          "different_pixels": 0,
+          "pixels": 7717692
+        }
+      ],
+      "pass": true
+    },
+    {
+      "figure": 3,
+      "manuscript_page": 16,
+      "reference": "completed_reproduction/paper/figures/step6_h6_state_composition_nominal80.pdf",
+      "reference_sha256": "7ee7034f976cbc03ede776b8bb996a9e6d12643be917d9ff7f112d2849613ee6",
+      "drawing_stream_identical": true,
+      "renders": [
+        {
+          "dpi": 144,
+          "different_pixels": 0,
+          "pixels": 408240
+        },
+        {
+          "dpi": 288,
+          "different_pixels": 0,
+          "pixels": 1632960
+        }
+      ],
+      "pass": true
+    },
+    {
+      "figure": 4,
+      "manuscript_page": 17,
+      "reference": "completed_reproduction/paper/figures/step6_h6_state_composition_nominal90.pdf",
+      "reference_sha256": "6698504ead7544a73d37f79b28edf5c393e1cceaa588a6f4fb42323bd1bb1562",
+      "drawing_stream_identical": true,
+      "renders": [
+        {
+          "dpi": 144,
+          "different_pixels": 0,
+          "pixels": 408240
+        },
+        {
+          "dpi": 288,
+          "different_pixels": 0,
+          "pixels": 1632960
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "tables": [
+    {
+      "table": 1,
+      "manuscript_page": 10,
+      "rows": 3,
+      "numeric_cells": 12,
+      "pass": true,
+      "checked_rows": [
+        {
+          "row": 1,
+          "cells": [
+            "3",
+            "200",
+            "8",
+            "5,000"
+          ],
+          "pass": true
+        },
+        {
+          "row": 2,
+          "cells": [
+            "6",
+            "200",
+            "64",
+            "5,000"
+          ],
+          "pass": true
+        },
+        {
+          "row": 3,
+          "cells": [
+            "9",
+            "200",
+            "512",
+            "5,000"
+          ],
+          "pass": true
+        }
+      ]
+    },
+    {
+      "table": 2,
+      "manuscript_page": 14,
+      "rows": 12,
+      "numeric_cells": 72,
+      "pass": true,
+      "checked_rows": [
+        {
+          "row": 1,
+          "cells": [
+            "3",
+            "80",
+            "706",
+            "1.000",
+            "5.540"
+          ],
+          "pass": true
+        },
+        {
+          "row": 2,
+          "cells": [
+            "3",
+            "90",
+            "706",
+            "1.397",
+            "6.319"
+          ],
+          "pass": true
+        },
+        {
+          "row": 3,
+          "cells": [
+            "6",
+            "80",
+            "672",
+            "1.092",
+            "39.540"
+          ],
+          "pass": true
+        },
+        {
+          "row": 4,
+          "cells": [
+            "6",
+            "90",
+            "672",
+            "6.455",
+            "45.626"
+          ],
+          "pass": true
+        },
+        {
+          "row": 5,
+          "cells": [
+            "9",
+            "80",
+            "639",
+            "2.244",
+            "309.718"
+          ],
+          "pass": true
+        },
+        {
+          "row": 6,
+          "cells": [
+            "9",
+            "90",
+            "639",
+            "25.734",
+            "357.272"
+          ],
+          "pass": true
+        },
+        {
+          "row": 7,
+          "cells": [
+            "3",
+            "80",
+            "4,294",
+            "0.877",
+            "0.878",
+            "0.880",
+            "4.799"
+          ],
+          "pass": true
+        },
+        {
+          "row": 8,
+          "cells": [
+            "3",
+            "90",
+            "4,294",
+            "1.042",
+            "1.041",
+            "1.091",
+            "5.869"
+          ],
+          "pass": true
+        },
+        {
+          "row": 9,
+          "cells": [
+            "6",
+            "80",
+            "4,328",
+            "0.889",
+            "0.889",
+            "0.883",
+            "28.923"
+          ],
+          "pass": true
+        },
+        {
+          "row": 10,
+          "cells": [
+            "6",
+            "90",
+            "4,328",
+            "1.935",
+            "1.857",
+            "4.460",
+            "39.360"
+          ],
+          "pass": true
+        },
+        {
+          "row": 11,
+          "cells": [
+            "9",
+            "80",
+            "4,361",
+            "0.926",
+            "0.918",
+            "0.958",
+            "197.585"
+          ],
+          "pass": true
+        },
+        {
+          "row": 12,
+          "cells": [
+            "9",
+            "90",
+            "4,361",
+            "6.822",
+            "6.707",
+            "36.082",
+            "284.220"
+          ],
+          "pass": true
+        }
+      ]
+    },
+    {
+      "table": 3,
+      "manuscript_page": 15,
+      "rows": 3,
+      "numeric_cells": 21,
+      "pass": true,
+      "checked_rows": [
+        {
+          "row": 1,
+          "cells": [
+            "3",
+            "706",
+            "27.19",
+            "171.68",
+            "5.38",
+            "2.55",
+            "30.74"
+          ],
+          "pass": true
+        },
+        {
+          "row": 2,
+          "cells": [
+            "6",
+            "672",
+            "26.60",
+            "172.46",
+            "0.15",
+            "4.91",
+            "8.63"
+          ],
+          "pass": true
+        },
+        {
+          "row": 3,
+          "cells": [
+            "9",
+            "639",
+            "25.97",
+            "173.23",
+            "0.00",
+            "5.79",
+            "5.95"
+          ],
+          "pass": true
+        }
+      ]
+    },
+    {
+      "table": 4,
+      "manuscript_page": 15,
+      "rows": 12,
+      "numeric_cells": 96,
+      "pass": true,
+      "checked_rows": [
+        {
+          "row": 1,
+          "cells": [
+            "3",
+            "10",
+            "1.006",
+            "5.576",
+            "1.794",
+            "6.284",
+            "97.32",
+            "88.44"
+          ],
+          "pass": true
+        },
+        {
+          "row": 2,
+          "cells": [
+            "3",
+            "50",
+            "1.000",
+            "5.576",
+            "1.179",
+            "6.284",
+            "97.06",
+            "88.44"
+          ],
+          "pass": true
+        },
+        {
+          "row": 3,
+          "cells": [
+            "3",
+            "100",
+            "1.000",
+            "5.576",
+            "1.024",
+            "6.284",
+            "96.98",
+            "88.44"
+          ],
+          "pass": true
+        },
+        {
+          "row": 4,
+          "cells": [
+            "3",
+            "200",
+            "1.000",
+            "5.576",
+            "1.001",
+            "6.284",
+            "96.98",
+            "88.44"
+          ],
+          "pass": true
+        },
+        {
+          "row": 5,
+          "cells": [
+            "6",
+            "10",
+            "1.451",
+            "41.156",
+            "13.489",
+            "50.355",
+            "95.70",
+            "89.12"
+          ],
+          "pass": true
+        },
+        {
+          "row": 6,
+          "cells": [
+            "6",
+            "50",
+            "1.030",
+            "39.188",
+            "3.972",
+            "44.074",
+            "94.58",
+            "87.76"
+          ],
+          "pass": true
+        },
+        {
+          "row": 7,
+          "cells": [
+            "6",
+            "100",
+            "1.000",
+            "39.188",
+            "1.901",
+            "44.074",
+            "94.10",
+            "87.76"
+          ],
+          "pass": true
+        },
+        {
+          "row": 8,
+          "cells": [
+            "6",
+            "200",
+            "1.000",
+            "39.188",
+            "1.203",
+            "44.074",
+            "93.92",
+            "87.76"
+          ],
+          "pass": true
+        },
+        {
+          "row": 9,
+          "cells": [
+            "9",
+            "10",
+            "4.705",
+            "326.333",
+            "63.017",
+            "388.730",
+            "95.62",
+            "88.80"
+          ],
+          "pass": true
+        },
+        {
+          "row": 10,
+          "cells": [
+            "9",
+            "50",
+            "1.501",
+            "307.982",
+            "17.840",
+            "348.368",
+            "93.98",
+            "86.66"
+          ],
+          "pass": true
+        },
+        {
+          "row": 11,
+          "cells": [
+            "9",
+            "100",
+            "1.084",
+            "307.998",
+            "8.710",
+            "346.465",
+            "92.94",
+            "86.10"
+          ],
+          "pass": true
+        },
+        {
+          "row": 12,
+          "cells": [
+            "9",
+            "200",
+            "1.015",
+            "307.998",
+            "3.945",
+            "346.465",
+            "92.30",
+            "86.10"
+          ],
+          "pass": true
+        }
+      ]
+    },
+    {
+      "table": 5,
+      "manuscript_page": 20,
+      "rows": 6,
+      "numeric_cells": 30,
+      "pass": true,
+      "checked_rows": [
+        {
+          "row": 1,
+          "cells": [
+            "3",
+            "706",
+            "3.262",
+            "6.788"
+          ],
+          "pass": true
+        },
+        {
+          "row": 2,
+          "cells": [
+            "6",
+            "672",
+            "21.851",
+            "50.443"
+          ],
+          "pass": true
+        },
+        {
+          "row": 3,
+          "cells": [
+            "9",
+            "639",
+            "118.851",
+            "392.574"
+          ],
+          "pass": true
+        },
+        {
+          "row": 4,
+          "cells": [
+            "3",
+            "4,294",
+            "1.707",
+            "1.690",
+            "2.333",
+            "6.535"
+          ],
+          "pass": true
+        },
+        {
+          "row": 5,
+          "cells": [
+            "6",
+            "4,328",
+            "9.643",
+            "9.834",
+            "17.546",
+            "47.587"
+          ],
+          "pass": true
+        },
+        {
+          "row": 6,
+          "cells": [
+            "9",
+            "4,361",
+            "37.852",
+            "36.217",
+            "114.871",
+            "355.473"
+          ],
+          "pass": true
+        }
+      ]
+    },
+    {
+      "table": 6,
+      "manuscript_page": 21,
+      "rows": 9,
+      "numeric_cells": 99,
+      "pass": true,
+      "checked_rows": [
+        {
+          "row": 1,
+          "cells": [
+            "3",
+            "80",
+            "-0.0005",
+            "-0.0045",
+            "+0.0036",
+            "-0.0058",
+            "-0.0569",
+            "+0.0452",
+            "+0.023",
+            "-0.377",
+            "+0.424"
+          ],
+          "pass": true
+        },
+        {
+          "row": 2,
+          "cells": [
+            "3",
+            "90",
+            "+0.0012",
+            "-0.0039",
+            "+0.0062",
+            "+0.0146",
+            "-0.0482",
+            "+0.0773",
+            "-0.140",
+            "-0.344",
+            "+0.064"
+          ],
+          "pass": true
+        },
+        {
+          "row": 3,
+          "cells": [
+            "3",
+            "95",
+            "+0.0170",
+            "+0.0051",
+            "+0.0289",
+            "+0.2125",
+            "+0.0637",
+            "+0.3613",
+            "+0.093",
+            "-0.078",
+            "+0.264"
+          ],
+          "pass": true
+        },
+        {
+          "row": 4,
+          "cells": [
+            "6",
+            "80",
+            "+0.0005",
+            "-0.0031",
+            "+0.0040",
+            "+0.0007",
+            "-0.0049",
+            "+0.0063",
+            "+0.046",
+            "-0.293",
+            "+0.385"
+          ],
+          "pass": true
+        },
+        {
+          "row": 5,
+          "cells": [
+            "6",
+            "90",
+            "+0.0786",
+            "+0.0432",
+            "+0.1139",
+            "+0.1227",
+            "+0.0675",
+            "+0.1780",
+            "+0.023",
+            "-0.184",
+            "+0.231"
+          ],
+          "pass": true
+        },
+        {
+          "row": 6,
+          "cells": [
+            "6",
+            "95",
+            "-0.1906",
+            "-0.2804",
+            "-0.1009",
+            "-0.2978",
+            "-0.4381",
+            "-0.1576",
+            "+0.000",
+            "-0.272",
+            "+0.272"
+          ],
+          "pass": true
+        },
+        {
+          "row": 7,
+          "cells": [
+            "9",
+            "80",
+            "+0.0085",
+            "-0.0022",
+            "+0.0191",
+            "+0.0017",
+            "-0.0004",
+            "+0.0037",
+            "+0.000",
+            "-0.330",
+            "+0.330"
+          ],
+          "pass": true
+        },
+        {
+          "row": 8,
+          "cells": [
+            "9",
+            "90",
+            "+0.1147",
+            "-0.0362",
+            "+0.2655",
+            "+0.0224",
+            "-0.0071",
+            "+0.0519",
+            "+0.092",
+            "-0.213",
+            "+0.397"
+          ],
+          "pass": true
+        },
+        {
+          "row": 9,
+          "cells": [
+            "9",
+            "95",
+            "+1.6352",
+            "+1.2337",
+            "+2.0366",
+            "+0.3194",
+            "+0.2410",
+            "+0.3978",
+            "-0.138",
+            "-0.449",
+            "+0.174"
+          ],
+          "pass": true
+        }
+      ]
+    },
+    {
+      "table": 7,
+      "manuscript_page": 22,
+      "rows": 6,
+      "numeric_cells": 48,
+      "pass": true,
+      "checked_rows": [
+        {
+          "row": 1,
+          "cells": [
+            "6",
+            "45",
+            "4,328",
+            "2,423",
+            "44.02",
+            "45.28",
+            "0.049419",
+            "1.000000"
+          ],
+          "pass": true
+        },
+        {
+          "row": 2,
+          "cells": [
+            "6",
+            "50",
+            "4,328",
+            "2,239",
+            "48.27",
+            "50.14",
+            "0.007075",
+            "0.806523"
+          ],
+          "pass": true
+        },
+        {
+          "row": 3,
+          "cells": [
+            "6",
+            "55",
+            "4,328",
+            "1,998",
+            "53.84",
+            "55.28",
+            "0.029180",
+            "1.000000"
+          ],
+          "pass": true
+        },
+        {
+          "row": 4,
+          "cells": [
+            "6",
+            "60",
+            "4,328",
+            "1,783",
+            "58.80",
+            "60.23",
+            "0.028849",
+            "1.000000"
+          ],
+          "pass": true
+        },
+        {
+          "row": 5,
+          "cells": [
+            "9",
+            "65",
+            "4,361",
+            "1,572",
+            "63.95",
+            "65.30",
+            "0.032556",
+            "1.000000"
+          ],
+          "pass": true
+        },
+        {
+          "row": 6,
+          "cells": [
+            "9",
+            "70",
+            "4,361",
+            "1,359",
+            "68.84",
+            "70.26",
+            "0.021145",
+            "1.000000"
+          ],
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "narrative": [
+    {
+      "claim": "OCHS G0 nominal 80% range",
+      "computed": [
+        "79.55",
+        "80.38"
+      ],
+      "manuscript": [
+        "79.55",
+        "80.38"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "OCHS G0 nominal 90% range",
+      "computed": [
+        "90.20",
+        "90.32"
+      ],
+      "manuscript": [
+        "90.20",
+        "90.32"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "OCHS G0 nominal 95% range",
+      "computed": [
+        "95.00",
+        "95.16"
+      ],
+      "manuscript": [
+        "95.00",
+        "95.16"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "OCHS G1 nominal 80% range",
+      "computed": [
+        "92.02",
+        "96.03"
+      ],
+      "manuscript": [
+        "92.02",
+        "96.03"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "OCHS G1 nominal 90% range",
+      "computed": [
+        "94.52",
+        "96.32"
+      ],
+      "manuscript": [
+        "94.52",
+        "96.32"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "h9 randomized i-block overall",
+      "computed": [
+        "79.64",
+        "90.20",
+        "95.24"
+      ],
+      "manuscript": [
+        "79.64",
+        "90.20",
+        "95.24"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "h9 randomized i-block G1",
+      "computed": [
+        "71.05",
+        "85.45",
+        "92.33"
+      ],
+      "manuscript": [
+        "71.05",
+        "85.45",
+        "92.33"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "h9 G1 nominal90 retained percentages",
+      "computed": [
+        "5.0",
+        "69.8"
+      ],
+      "manuscript": [
+        "5.0",
+        "69.8"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "G0 nominal80 empty frequency range",
+      "computed": [
+        "11.1",
+        "14.6"
+      ],
+      "manuscript": [
+        "11.1",
+        "14.6"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "h9 L200 nominal95 adverse coverage",
+      "computed": [
+        "94.34",
+        "90.90"
+      ],
+      "manuscript": [
+        "94.34",
+        "90.90"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "diagnostic count",
+      "computed": 114,
+      "manuscript": 114,
+      "pass": true
+    },
+    {
+      "claim": "raw significant diagnostic count",
+      "computed": 6,
+      "manuscript": 6,
+      "pass": true
+    },
+    {
+      "claim": "adjusted significant diagnostic count",
+      "computed": 0,
+      "manuscript": 0,
+      "pass": true
+    },
+    {
+      "claim": "smallest diagnostic p-values",
+      "computed": [
+        "0.007075",
+        "0.806523"
+      ],
+      "manuscript": [
+        "0.007075",
+        "0.806523"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "worst diagnostic identity",
+      "computed": [
+        "6",
+        "G0",
+        "4328",
+        "2239"
+      ],
+      "manuscript": [
+        "6",
+        "G0",
+        "4328",
+        "2239"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "worst diagnostic coverage and rank bound",
+      "computed": [
+        "48.27",
+        "50.14"
+      ],
+      "manuscript": [
+        "48.27",
+        "50.14"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "h9 G1 nominal95 coverage",
+      "computed": [
+        "97.03",
+        "92.33"
+      ],
+      "manuscript": [
+        "97.03",
+        "92.33"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "h9 G1 ochs090-minus-randomized_iblock nominal90 paired mean and interval",
+      "computed": [
+        "-331.538",
+        "-334.856",
+        "-328.221"
+      ],
+      "manuscript": [
+        "-331.538",
+        "-334.856",
+        "-328.221"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "h6 G0 ochs090-minus-count nominal90 paired mean and interval",
+      "computed": [
+        "0.079",
+        "0.043",
+        "0.114"
+      ],
+      "manuscript": [
+        "0.079",
+        "0.043",
+        "0.114"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "h9 L200-L10 nominal90 paired size and interval",
+      "computed": [
+        "-59.072",
+        "-61.217",
+        "-56.927"
+      ],
+      "manuscript": [
+        "-59.072",
+        "-61.217",
+        "-56.927"
+      ],
+      "pass": true
+    },
+    {
+      "claim": "h9 L200 nominal95 Wilson interval",
+      "computed": [
+        "93.66",
+        "94.95"
+      ],
+      "manuscript": [
+        "93.66",
+        "94.95"
+      ],
+      "pass": true
+    }
+  ],
+  "layout_observations": [
+    "Figure 2 is printed on PDF page 18, after Figures 3 and 4 on pages 16 and 17.",
+    "Figures 3 and 4 are reduced substantially on the manuscript page; figure content matches exactly, but labels are small at normal reading size."
+  ],
+  "status": "PASS",
+  "scope": "Sections 4-5 and Appendix B numerical tables and figures; no simulations and no manuscript edits. Figure comparisons isolate embedded PDF Forms at original size with original resources.",
+  "portable_copy": {
+    "original_report_sha256": "7ae7f525e662852e5aae33126b7d1a6da79680c860f8cf44590680a7b6436733",
+    "changes": "Local file locations replaced; comparison values unchanged."
+  }
+}

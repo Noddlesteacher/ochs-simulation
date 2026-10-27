@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "main_panels": 15000,
+  "fixed_history_scenarios": 60000,
+  "checks": [
+    "RAW_CHECK.json",
+    "SUMMARY_CHECK.json",
+    "paper/FIGURE_CHECK.json",
+    "paper/tables/TABLE_CHECK.json"
+  ]
+}

@@ -1,0 +1,46 @@
+\begin{table}[!htbp]
+\centering
+\caption{Fixed all-state-1 target histories: mean prediction-set
+sizes at 80\% and 90\% nominal coverage, and empirical whole-path
+coverage at 90\%.}
+\label{tab:history-length}
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.06}
+\begin{tabular}{@{}rrrrrrrr@{}}
+\toprule
+ & & \multicolumn{2}{c}{80\% mean size}
+ & \multicolumn{2}{c}{90\% mean size}
+ & \multicolumn{2}{c}{90\% coverage (\%)} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+$h$ & $L_*$ & OCHS & $i$-block & OCHS & $i$-block
+ & OCHS & $i$-block \\
+\midrule
+3 & 10 & 1.006 & 5.576 & 1.794 & 6.284 & 97.32 & 88.44 \\
+3 & 50 & 1.000 & 5.576 & 1.179 & 6.284 & 97.06 & 88.44 \\
+3 & 100 & 1.000 & 5.576 & 1.024 & 6.284 & 96.98 & 88.44 \\
+3 & 200 & 1.000 & 5.576 & 1.001 & 6.284 & 96.98 & 88.44 \\
+\addlinespace[3pt]
+6 & 10 & 1.451 & 41.156 & 13.489 & 50.355 & 95.70 & 89.12 \\
+6 & 50 & 1.030 & 39.188 & 3.972 & 44.074 & 94.58 & 87.76 \\
+6 & 100 & 1.000 & 39.188 & 1.901 & 44.074 & 94.10 & 87.76 \\
+6 & 200 & 1.000 & 39.188 & 1.203 & 44.074 & 93.92 & 87.76 \\
+\addlinespace[3pt]
+9 & 10 & 4.705 & 326.333 & 63.017 & 388.730 & 95.62 & 88.80 \\
+9 & 50 & 1.501 & 307.982 & 17.840 & 348.368 & 93.98 & 86.66 \\
+9 & 100 & 1.084 & 307.998 & 8.710 & 346.465 & 92.94 & 86.10 \\
+9 & 200 & 1.015 & 307.998 & 3.945 & 346.465 & 92.30 & 86.10 \\
+\bottomrule
+\end{tabular}
+\par\vspace{4pt}
+\begin{minipage}{0.98\linewidth}
+\footnotesize
+Each $(h,L_*)$ setting uses 5,000 target continuations. The same
+reference pool and true continuation are shared across the four
+lengths within each replicate. All OCHS weights coincide in group~1;
+$i$-block uses randomized ties and no reference calibration data.
+Means include empty prediction sets.
+\end{minipage}
+\endgroup
+\end{table}

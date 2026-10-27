@@ -1,0 +1,39 @@
+\begin{table}[!htbp]
+\centering
+\caption{The six coverage diagnostics with unadjusted
+$p_{\mathrm{diag}}<0.05$ for the primary OCHS specification
+($\lambda=0.90$). All six occur in group~0.}
+\label{tab:coverage-diagnostic-levels}
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}rrrrrrrr@{}}
+\toprule
+$h$ & Nominal & Targets & Misses
+& \shortstack{Coverage\\(\%)}
+& \shortstack{Rank bound\\(\%)}
+& Raw $p$ & \shortstack{Bonferroni\\114} \\
+\midrule
+6 & 45\% & 4,328 & 2,423 & 44.02 & 45.28 & 0.049419 & 1.000000 \\
+6 & 50\% & 4,328 & 2,239 & 48.27 & 50.14 & 0.007075 & 0.806523 \\
+6 & 55\% & 4,328 & 1,998 & 53.84 & 55.28 & 0.029180 & 1.000000 \\
+6 & 60\% & 4,328 & 1,783 & 58.80 & 60.23 & 0.028849 & 1.000000 \\
+\addlinespace[3pt]
+9 & 65\% & 4,361 & 1,572 & 63.95 & 65.30 & 0.032556 & 1.000000 \\
+9 & 70\% & 4,361 & 1,359 & 68.84 & 70.26 & 0.021145 & 1.000000 \\
+\bottomrule
+\end{tabular}
+\par\vspace{5pt}
+\begin{minipage}{0.97\linewidth}
+\footnotesize
+Nominal is $100(1-\alpha)\%$. Targets is the group-specific number
+of replicates $R$, and Misses is $k_{\mathrm{obs}}$.
+Rank bound is $100R^{-1}\sum_{r=1}^{R}\{1-b_r(\alpha)\}$,
+computed using the observed reference counts. It is a descriptive
+average; the Poisson--binomial calculation uses the individual
+probabilities $b_r(\alpha)$. Adjusted p-values use the full family
+of 114 comparisons, not only the six rows displayed.
+\end{minipage}
+\endgroup
+\end{table}

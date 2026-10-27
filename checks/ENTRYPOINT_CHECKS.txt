@@ -1,0 +1,8 @@
+test_disk_gate_does_not_launch_computation (__main__.EntryPointChecks.test_disk_gate_does_not_launch_computation) ... ok
+test_failure_stops_without_substitution (__main__.EntryPointChecks.test_failure_stops_without_substitution) ... ok
+test_full_stage_order_and_new_data_paths (__main__.EntryPointChecks.test_full_stage_order_and_new_data_paths) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.037s
+
+OK

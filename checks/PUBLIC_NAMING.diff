@@ -1,0 +1,663 @@
+--- previous/README.md
++++ named/README.md
+@@ -43,11 +43,11 @@
+ 
+ ```text
+ OCHS_REPRODUCED_<date_and_time>/
+-  step5/       newly generated main-study records and predictions
+-  templates/   newly computed exact fixed-history scores
+-  step6/       newly generated fixed-study futures, uniforms and results
+-  summary5/    main-study summaries computed from the new records
+-  summary6/    fixed-history summaries and repeat-0 set composition
++  main_study/             newly generated main-study records and predictions
++  templates/              newly computed exact fixed-history scores
++  fixed_history_study/    newly generated fixed-history futures, uniforms and results
++  main_study_summary/     main-study summaries computed from the new records
++  fixed_history_summary/  fixed-history summaries and repeat-0 set composition
+   paper/
+     figures/   the four manuscript PDFs and PNG previews
+     tables/    the seven manuscript LaTeX tables
+@@ -61,16 +61,16 @@
+ 
+ | Study | Data-generating design | Scope |
+ |---|---|---|
+-| Main study (Step5) | 200 independent countries; history lengths T=h+K, K~Geom(1/78) | h=3,6,9; 5,000 panels each |
+-| Fixed-history study (Step6) | Target history consists of 1s; L=10,50,100,200 | All 5,000 newly regenerated reference pools per h; four paired lengths |
++| Main study: random-length histories (`main_study`) | 200 independent countries; history lengths T=h+K, K~Geom(1/78) | h=3,6,9; 5,000 panels each |
++| Fixed-history study: all-state-1 targets (`fixed_history_study`) | Target history consists of 1s; L=10,50,100,200 | All 5,000 newly regenerated reference pools per h; four paired lengths |
+ 
+ The four methods are OCHS lambda=.90, count-only OCHS, OCHS lambda=.50,
+ and randomized i-block. Every method uses all 21 levels alpha=0,.05,...,1
+ and all 2^h admissible candidates.
+ 
+-Step6 generates new target futures from state 1, using its own original seed.
++The fixed-history study generates new target futures from state 1, using its own original seed.
+ Within a pool, its future, reference data, and candidate-specific uniforms are
+-shared across lengths. It does not reuse the original Step5 target's truth.
++shared across lengths. It does not reuse the main-study target's truth.
+ The three OCHS specifications coincide for the all-state-1 targets.
+ 
+ The fixed-history study measures conditional performance; it is not an
+@@ -97,11 +97,17 @@
+ 
+ ## 4. Why seeds alone are not enough
+ 
+-The two public simulation seeds are in protocol/step5_seed.json and
+-protocol/step6_seed.json. These are research reproducibility seeds, not secrets.
++The original public seeds are provided in the [main-study seed record](protocol/step5_seed.json)
++and [fixed-history seed record](protocol/step6_seed.json).
++These are research reproducibility seeds, not secrets.
+ The original generator also fixes PCG64, stream addressing, run/model
+ identifiers, integer innovation rules and candidate order. These are retained.
+ Changing just one of them can change the data even with the same master seed.
++
++Public commands and new output directories use descriptive study names.
++Some archival IDs and manuscript figure filenames intentionally retain old
++numbering; this is not a request to run earlier experiments. See
++[the experiment-name mapping](docs/EXPERIMENT_NAMES.md).
+ 
+ Reproduction checks compare all 120,000 original scientific file hashes, all
+ 12 template hashes, nine aggregate CSV files, 378 numerical table cells, and
+@@ -139,6 +145,9 @@
+ another hours-long reproduction. A missing final success record means the full
+ pipeline has not passed.
+ 
++The lower-level `--study` choices are `main_study` and `fixed_history_study`.
++Most readers should use START_HERE.py, which supplies these automatically.
++
+ ## 7. GitHub and submission
+ 
+ This folder is arranged as the repository root. Do not upload generated
+--- previous/REVIEWER_GUIDE.md
++++ named/REVIEWER_GUIDE.md
+@@ -3,6 +3,11 @@
+ The public entry point is START_HERE.py. The scientific pipeline is separated
+ from the watchdog, saving, and verification helpers so that a reader can follow
+ the method without first reading the experiment-management code.
++
++The two experiments are named `main_study` (random-length histories) and
++`fixed_history_study` (fixed all-state-1 target histories). Older identifiers
++are retained only for scientific/archive compatibility; the precise mapping
++is in [docs/EXPERIMENT_NAMES.md](docs/EXPERIMENT_NAMES.md).
+ 
+ ## Main study
+ 
+@@ -40,16 +45,16 @@
+ 
+ The templates are computed from the scoring functions by
+ simulation/build_templates.py. They are not shipped as precomputed input.
+-No old Step5 target history, target future, or G0 selection is used to score
++No main-study target history, target future, or G0 selection is used to score
+ the new all-state-1 target.
+ 
+ ## Figures and tables
+ 
+ | Manuscript item | Code | Newly computed source |
+ |---|---|---|
+-| Figure 1: reliability | figures/figure1_reliability.py | summary5/tables/SUMMARY_BY_H_GROUP_ALPHA.csv |
+-| Figure 2: fixed-length performance | figures/figure2_fixed_lengths.py | summary6/tables/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv |
+-| Figures 3–4: retained-set composition | figures/figures3_4_composition.py | summary6/RETAINED_PATHS_AND_COUNTS.json |
++| Figure 1: reliability | figures/figure1_reliability.py | main_study_summary/tables/SUMMARY_BY_H_GROUP_ALPHA.csv |
++| Figure 2: fixed-length performance | figures/figure2_fixed_lengths.py | fixed_history_summary/tables/SUMMARY_FIXED_LENGTH_ALL_ALPHA.csv |
++| Figures 3–4: retained-set composition | figures/figures3_4_composition.py | fixed_history_summary/RETAINED_PATHS_AND_COUNTS.json |
+ | Tables 1–7 | tables/make_tables.py | Main/fixed summaries, paired contrasts, reference availability, diagnostics |
+ 
+ collect_reproduction.py builds the composition JSON from the newly calculated
+--- previous/START_HERE.py
++++ named/START_HERE.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""Run BOTH paper experiments from their fixed seeds, then build the paper.
++"""Run the main study and fixed-history study from seed, then build paper artifacts.
+ 
+ Run this file in your IDE, or type: python START_HERE.py
+ This is the FULL experiment, not a quick plot of supplied data. Allow hours.
+@@ -66,9 +66,9 @@
+         run(
+             "run_simulation.py",
+             "--study",
+-            "step5",
++            "main_study",
+             "--out",
+-            output / "step5",
++            output / "main_study",
+             "--run-full-study",
+         )
+ 
+@@ -86,16 +86,16 @@
+             check=True,
+         )
+ 
+-        # 3. Reuse the NEW Step5 reference pools; generate the fixed-study futures
++        # 3. Reuse the NEW main-study pools; generate the fixed-history futures
+         #    and candidate uniforms with its own original seed.
+         run(
+             "run_simulation.py",
+             "--study",
+-            "step6",
++            "fixed_history_study",
+             "--out",
+-            output / "step6",
++            output / "fixed_history_study",
+             "--main-inputs",
+-            output / "step5/panels",
++            output / "main_study/panels",
+             "--templates",
+             output / "templates",
+             "--run-full-study",
+@@ -106,9 +106,9 @@
+         run(
+             "verify_reproduction.py",
+             "--main",
+-            output / "step5",
++            output / "main_study",
+             "--fixed",
+-            output / "step6",
++            output / "fixed_history_study",
+             "--templates",
+             output / "templates",
+             "--report",
+@@ -119,24 +119,24 @@
+         run(
+             "collect_reproduction.py",
+             "--run",
+-            output / "step5",
++            output / "main_study",
+             "--out",
+-            output / "summary5",
++            output / "main_study_summary",
+         )
+         run(
+             "collect_reproduction.py",
+             "--run",
+-            output / "step6",
++            output / "fixed_history_study",
+             "--out",
+-            output / "summary6",
++            output / "fixed_history_summary",
+         )
+         run(
+             "verify_reproduction.py",
+             "--summaries",
+             "--main",
+-            output / "summary5/tables",
++            output / "main_study_summary/tables",
+             "--fixed",
+-            output / "summary6/tables",
++            output / "fixed_history_summary/tables",
+             "--report",
+             output / "SUMMARY_CHECK.json",
+         )
+@@ -145,11 +145,11 @@
+         run(
+             "render_paper.py",
+             "--main-results",
+-            output / "summary5/tables",
++            output / "main_study_summary/tables",
+             "--fixed-results",
+-            output / "summary6/tables",
++            output / "fixed_history_summary/tables",
+             "--composition",
+-            output / "summary6/RETAINED_PATHS_AND_COUNTS.json",
++            output / "fixed_history_summary/RETAINED_PATHS_AND_COUNTS.json",
+             "--out",
+             output / "paper",
+         )
+--- previous/VALIDATION.md
++++ named/VALIDATION.md
+@@ -1,4 +1,22 @@
+ # Validation status — 25 October 2026
++
++## Public-name edition
++
++The public entry point, run_simulation.py CLI, progress labels, new output
++directories and reader-facing instructions now use `main_study` and
++`fixed_history_study`. The small study_names.py mapping passes the unchanged
++archival IDs to the workers. Original seeds, scientific modules, aggregation,
++plotting, table construction and expected scientific fingerprints are unchanged.
++
++This edition passed 27 unit/orchestration tests: the existing 18 deterministic
++tests, 3 updated entry-point tests, and 6 public-name tests. The public-name
++launch tests stop at a mocked worker boundary; they verify both mappings,
++seed-file hashes, budgets and paths without generating scientific panels.
++The entry-point test mocks all long-running subprocesses. File-by-file SHA-256
++comparisons and the exact text diff are saved in checks/NAMING_QA.json and
++checks/PUBLIC_NAMING.diff. Historical checks below are retained without rewriting
++their records. No new full-study run, aggregate recomputation or figure rendering
++was performed for this naming-only change. The full-run limitation below remains.
+ 
+ ## What passed in this correction
+ 
+--- previous/run_simulation.py
++++ named/run_simulation.py
+@@ -2,8 +2,9 @@
+ """Run one complete study from its original seeds (called by START_HERE.py).
+ 
+ Explicitly request --run-full-study. There is no pilot, seed search, or sample
+-size option. Step5 uses 15,000 original scientific addresses; Step6 uses those
+-same 15,000 pools and four fixed lengths. No original files are written.
++size option. The main study uses 15,000 original scientific addresses; the
++fixed-history study uses those same pools and four lengths. No original files
++are written. Public names are mapped to unchanged archival IDs internally.
+ """
+ 
+ import argparse
+@@ -18,6 +19,7 @@
+ 
+ from simulation.settings import PACKAGE, HS, REPLICATES
+ from simulation.storage import load, save, require, sha
++from study_names import LEGACY_STUDY_IDS, STUDY_TITLES
+ 
+ 
+ def directory_bytes(folder):
+@@ -76,30 +78,38 @@
+ 
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument("--study", choices=("step5", "step6"), required=True)
++    parser.add_argument("--study", choices=tuple(LEGACY_STUDY_IDS), required=True)
+     parser.add_argument("--out", type=Path, required=True)
+     parser.add_argument(
+-        "--main-inputs", type=Path, help="Step5 reproduction /panels folder for Step6"
++        "--main-inputs",
++        type=Path,
++        help="Main-study /panels folder, required by the fixed-history study",
+     )
+     parser.add_argument("--run-full-study", action="store_true")
+-    parser.add_argument("--templates", type=Path, help="Fresh Step6 exact templates")
++    parser.add_argument(
++        "--templates", type=Path, help="Fresh fixed-history exact templates"
++    )
+     parser.add_argument(
+         "--resume",
+         action="store_true",
+         help="Continue untouched tasks; completed tasks are verified",
+     )
+     args = parser.parse_args()
++    # Only the public label changes. Workers, seed files and saved scientific
++    # identities keep the original ID; never rename a random-stream namespace.
++    study = LEGACY_STUDY_IDS[args.study]
+     require(
+         args.run_full_study,
+         "No run started. START_HERE.py runs the complete reproduction pipeline.",
+     )
++    print(STUDY_TITLES[args.study], flush=True)
+     out = args.out.resolve()
+     require(
+         not out.is_relative_to(PACKAGE),
+         "Use an output directory outside the publication package",
+     )
+-    budget = (24 if args.study == "step5" else 8) * 3600
+-    byte_limit = (12 if args.study == "step5" else 2) * 2**30
++    budget = (24 if study == "step5" else 8) * 3600
++    byte_limit = (12 if study == "step5" else 2) * 2**30
+     if not args.resume:
+         require(not out.exists(), "Output exists; never replace a run")
+         require(
+@@ -110,14 +120,14 @@
+         save(
+             out / "REPRODUCTION_IDENTITY.json",
+             {
+-                "study": args.study,
++                "study": study,
+                 "panels_per_h": 5000,
+                 "h": [3, 6, 9],
+                 "seed_manifest_sha256": sha(
+-                    PACKAGE / "protocol" / f"{args.study}_seed.json"
++                    PACKAGE / "protocol" / f"{study}_seed.json"
+                 ),
+                 "template_sha256": (
+-                    template_hashes(args.templates) if args.study == "step6" else None
++                    template_hashes(args.templates) if study == "step6" else None
+                 ),
+                 "code_sha256": {
+                     str(p.relative_to(PACKAGE)): sha(p)
+@@ -126,10 +136,10 @@
+             },
+         )
+     identity = load(out / "REPRODUCTION_IDENTITY.json")
+-    require(identity["study"] == args.study, "Study identity mismatch")
++    require(identity["study"] == study, "Study identity mismatch")
+     require(
+         identity["seed_manifest_sha256"]
+-        == sha(PACKAGE / "protocol" / f"{args.study}_seed.json"),
++        == sha(PACKAGE / "protocol" / f"{study}_seed.json"),
+         "Seed changed",
+     )
+     require(
+@@ -144,21 +154,24 @@
+         not list(out.rglob("FAILED.json")),
+         "A failed task is present; no automatic retry",
+     )
+-    if args.study == "step6":
++    if study == "step6":
+         require(
+             identity["template_sha256"] == template_hashes(args.templates),
+             "Templates changed",
+         )
+         require(
+             args.main_inputs is not None,
+-            "Step6 needs complete Step5 reproduction output",
++            "The fixed-history study needs complete main-study reproduction output",
+         )
+         expected = {f"h{h}/FORMAL_{i:06d}" for h in HS for i in range(REPLICATES)}
+         actual = {
+             str(p.parent.relative_to(args.main_inputs))
+             for p in args.main_inputs.glob("h*/FORMAL_*/DONE.json")
+         }
+-        require(actual == expected, "Step6 requires ALL 15,000 Step5 pools")
++        require(
++            actual == expected,
++            "The fixed-history study requires ALL 15,000 main-study pools",
++        )
+     elapsed = sum(
+         load(p)["elapsed_seconds"]
+         for p in (out / "panels").glob("h*/FORMAL_*/RESOURCE_RECORD.json")
+@@ -171,7 +184,7 @@
+             if (folder / "DONE.json").exists():
+                 commit = load(folder / "DONE.json")
+                 require(
+-                    commit["identity"] == {"study": args.study, "h": h, "panel": panel},
++                    commit["identity"] == {"study": study, "h": h, "panel": panel},
+                     "Completed identity",
+                 )
+                 for name, expected_hash in commit["files"].items():
+@@ -189,7 +202,7 @@
+                 "-m",
+                 "simulation.run_worker",
+                 "--study",
+-                args.study,
++                study,
+                 "--h",
+                 str(h),
+                 "--panel",
+@@ -207,10 +220,10 @@
+             require(
+                 used_bytes <= byte_limit, "Output budget exceeded; results retained"
+             )
+-            print(f"{args.study} h={h}, {panel} completed", flush=True)
++            print(f"{STUDY_TITLES[args.study]} | h={h}, {panel} completed", flush=True)
+     save(
+         out / "COMPLETE.json",
+-        {"study": args.study, "completed_panels": 15000, "elapsed_seconds": elapsed},
++        {"study": study, "completed_panels": 15000, "elapsed_seconds": elapsed},
+     )
+     print("Finished. Use collect_reproduction.py to aggregate these saved outputs.")
+ 
+--- previous/tests/test_entrypoint.py
++++ named/tests/test_entrypoint.py
+@@ -40,10 +40,19 @@
+                     "render_paper.py",
+                 ],
+             )
+-            self.assertIn(str(out / "step5/panels"), calls[2])
++            self.assertIn("main_study", calls[0])
++            self.assertIn("fixed_history_study", calls[2])
++            self.assertIn(str(out / "main_study/panels"), calls[2])
+             self.assertIn(str(out / "templates"), calls[2])
+-            self.assertIn(str(out / "summary5/tables"), calls[-1])
+-            self.assertIn(str(out / "summary6/tables"), calls[-1])
++            self.assertIn(str(out / "main_study_summary/tables"), calls[-1])
++            self.assertIn(str(out / "fixed_history_summary/tables"), calls[-1])
++            self.assertIn(
++                str(out / "fixed_history_summary/RETAINED_PATHS_AND_COUNTS.json"),
++                calls[-1],
++            )
++            for command in calls:
++                self.assertNotIn("step5", command)
++                self.assertNotIn("step6", command)
+             # The MOCK success marker is contained in this temporary test directory.
+             self.assertTrue((out / "FULL_REPRODUCTION_VERIFIED.json").exists())
+ 
+--- previous/阅读说明.txt
++++ named/阅读说明.txt
+@@ -9,9 +9,10 @@
+ 第一次要配置 Python 3.13.0 和 requirements.txt 中固定版本的依赖。
+ 
+ 程序会在代码文件夹旁边建新输出目录：
+-先生成 Step5 的 15,000 个 panels；
++先运行 main_study（主模拟研究：随机长度历史），生成 15,000 个 panels；
+ 自己计算 12 套固定历史评分模板；
+-用新生成的 reference pools 完成 Step6 的 60,000 个长度场景；
++再运行 fixed_history_study（固定全1目标历史研究），
++用主模拟新生成的全部 reference pools 完成 60,000 个长度场景；
+ 计算汇总、配对差异和诊断；
+ 最后按论文样式生成图表，并与原始答案的校验值核对。
+ 
+@@ -24,3 +25,9 @@
+ 
+ GitHub 发布前，需作者确定代码许可证、作者信息和版本号。
+ 本次没有自动上传，也没有修改原论文或原实验。
++
++本版对外不再用 Step5、Step6 作为实验名称。
++START_HERE.py、运行参数、进度提示和新结果目录使用上述清晰名称。
++旧编号只保留在原始随机流身份、种子文件、底层兼容记录和论文图文件名中，
++不能为了改名把随机流也换掉；具体对应见 docs/EXPERIMENT_NAMES.md。
++本次仅改命名和说明，没有启动完整实验。请在本新版文件夹中打开 START_HERE.py。
+--- /dev/null
++++ named/study_names.py
+@@ -0,0 +1,16 @@
++"""Public experiment names and their unchanged archival identifiers.
++
++Readers use main_study or fixed_history_study. The numerical workers keep
++their original identifiers so that seeds, saved identities and checksums still
++refer to the same experiments. This module does not generate any randomness.
++"""
++
++LEGACY_STUDY_IDS = {
++    "main_study": "step5",
++    "fixed_history_study": "step6",
++}
++
++STUDY_TITLES = {
++    "main_study": "Main study: random-length histories",
++    "fixed_history_study": "Fixed-history study: all-state-1 target histories",
++}
+--- /dev/null
++++ named/tests/test_study_names.py
+@@ -0,0 +1,161 @@
++"""Test public names without launching any simulation worker.
++
++Temporary MOCK_ONLY folders contain synthetic orchestration records, never
++scientific results. The one-case loop below is a test fixture only; the
++production configuration remains three horizons and 5,000 panels per horizon.
++"""
++
++from collections import namedtuple
++from contextlib import ExitStack, redirect_stderr, redirect_stdout
++from io import StringIO
++from pathlib import Path
++import sys
++import tempfile
++import unittest
++from unittest.mock import patch
++
++import run_simulation
++from simulation.storage import load, save, sha
++from study_names import LEGACY_STUDY_IDS, STUDY_TITLES
++
++
++class StopBeforeWorker(RuntimeError):
++    """An intentional boundary: never generate or score a panel in these tests."""
++
++
++class StudyNameChecks(unittest.TestCase):
++    def test_mapping_retains_original_identifiers(self):
++        self.assertEqual(
++            LEGACY_STUDY_IDS,
++            {"main_study": "step5", "fixed_history_study": "step6"},
++        )
++        self.assertEqual(set(LEGACY_STUDY_IDS), set(STUDY_TITLES))
++
++    def test_help_uses_public_names(self):
++        output = StringIO()
++        with patch.object(sys, "argv", ["run_simulation.py", "--help"]):
++            with self.assertRaises(SystemExit) as stopped:
++                with redirect_stdout(output):
++                    run_simulation.main()
++        self.assertEqual(stopped.exception.code, 0)
++        self.assertIn("{main_study,fixed_history_study}", output.getvalue())
++        self.assertNotIn("step5", output.getvalue().lower())
++        self.assertNotIn("step6", output.getvalue().lower())
++
++    def test_old_labels_are_not_public_cli_choices(self):
++        for old_name in LEGACY_STUDY_IDS.values():
++            with self.subTest(old_name=old_name):
++                with patch.object(
++                    sys,
++                    "argv",
++                    ["run_simulation.py", "--study", old_name, "--out", "UNUSED"],
++                ), redirect_stderr(StringIO()):
++                    with self.assertRaises(SystemExit) as stopped:
++                        run_simulation.main()
++                self.assertEqual(stopped.exception.code, 2)
++
++    def test_no_launch_without_full_study_flag(self):
++        with tempfile.TemporaryDirectory() as directory:
++            for name in LEGACY_STUDY_IDS:
++                out = Path(directory) / name
++                with patch.object(
++                    sys,
++                    "argv",
++                    ["run_simulation.py", "--study", name, "--out", str(out)],
++                ), patch.object(run_simulation, "run_task") as worker:
++                    with self.assertRaisesRegex(Exception, "No run started"):
++                        run_simulation.main()
++                    worker.assert_not_called()
++                    self.assertFalse(out.exists())
++
++    def check_launch_boundary(self, public_name):
++        """Check the real launcher's mapping, paths, seed hash and budget."""
++        with tempfile.TemporaryDirectory() as directory, ExitStack() as stack:
++            root = Path(directory).resolve() / "MOCK_ONLY"
++            root.mkdir()
++            out = root / public_name
++            main_inputs = root / "main_study/panels"
++            templates = root / "templates"
++            if public_name == "fixed_history_study":
++                # A name-only mock pool entry satisfies the inventory fixture.
++                save(main_inputs / "h3/FORMAL_000000/DONE.json", {"mock_only": True})
++            arguments = [
++                "run_simulation.py",
++                "--study",
++                public_name,
++                "--out",
++                str(out),
++                "--run-full-study",
++            ]
++            if public_name == "fixed_history_study":
++                arguments += [
++                    "--main-inputs",
++                    str(main_inputs),
++                    "--templates",
++                    str(templates),
++                ]
++            stack.enter_context(patch.object(sys, "argv", arguments))
++            stack.enter_context(patch.object(run_simulation, "HS", (3,)))
++            stack.enter_context(patch.object(run_simulation, "REPLICATES", 1))
++            usage = namedtuple("Usage", "total used free")(
++                40 * 2**30, 10 * 2**30, 30 * 2**30
++            )
++            stack.enter_context(
++                patch.object(run_simulation.shutil, "disk_usage", return_value=usage)
++            )
++            stack.enter_context(
++                patch.object(
++                    run_simulation,
++                    "template_hashes",
++                    return_value={"MOCK_ONLY": "no-scientific-data"},
++                )
++            )
++            worker = stack.enter_context(
++                patch.object(run_simulation, "run_task", side_effect=StopBeforeWorker)
++            )
++            spawn = stack.enter_context(
++                patch.object(
++                    run_simulation.subprocess,
++                    "Popen",
++                    side_effect=AssertionError("No worker may be launched"),
++                )
++            )
++            printed = StringIO()
++            with self.assertRaises(StopBeforeWorker), redirect_stdout(printed):
++                run_simulation.main()
++            spawn.assert_not_called()
++            worker.assert_called_once()
++            command, folder, budget, run_root = worker.call_args.args
++            legacy = LEGACY_STUDY_IDS[public_name]
++            self.assertEqual(command[command.index("--study") + 1], legacy)
++            self.assertEqual(folder, out / "panels/h3/FORMAL_000000")
++            self.assertEqual(run_root, out)
++            self.assertEqual(budget, (24 if public_name == "main_study" else 8) * 3600)
++            if public_name == "fixed_history_study":
++                self.assertEqual(
++                    command[command.index("--main-inputs") + 1], str(main_inputs)
++                )
++                self.assertEqual(
++                    command[command.index("--templates") + 1], str(templates)
++                )
++            identity = load(out / "REPRODUCTION_IDENTITY.json")
++            self.assertEqual(identity["study"], legacy)
++            self.assertEqual(identity["panels_per_h"], 5000)
++            self.assertEqual(identity["h"], [3, 6, 9])
++            self.assertEqual(
++                identity["seed_manifest_sha256"],
++                sha(run_simulation.PACKAGE / "protocol" / f"{legacy}_seed.json"),
++            )
++            self.assertIn(STUDY_TITLES[public_name], printed.getvalue())
++            self.assertFalse((out / "panels").exists())
++            self.assertFalse((out / "COMPLETE.json").exists())
++
++    def test_main_study_keeps_original_worker_identity_and_seed(self):
++        self.check_launch_boundary("main_study")
++
++    def test_fixed_history_study_keeps_original_worker_identity_and_seed(self):
++        self.check_launch_boundary("fixed_history_study")
++
++
++if __name__ == "__main__":
++    unittest.main(verbosity=2)
+--- /dev/null
++++ named/docs/EXPERIMENT_NAMES.md
+@@ -0,0 +1,41 @@
++# Experiment names
++
++Readers do not need to know the development-stage numbering.
++
++| Public name | Scientific question | Internal archival ID |
++|---|---|---|
++| `main_study` — Main study: random-length histories | Whole-path coverage and set size overall and by history group; 5,000 panels for each h=3,6,9 | `step5` |
++| `fixed_history_study` — Fixed-history study: all-state-1 target histories | Conditional performance at L=10,50,100,200; all main-study reference pools reused, paired across lengths | `step6` |
++
++## What readers run
++
++Run `python START_HERE.py`. It generates data from the original seeds, runs
++both experiments, aggregates their new results, and builds the manuscript
++figures and tables. It is an hours-long full reproduction, not a plot-only
++command. Do not run it just to view these instructions.
++
++The public `run_simulation.py --study` choices are `main_study` and
++`fixed_history_study`. New output folders have those same descriptive names;
++summary folders are `main_study_summary` and `fixed_history_summary`.
++
++## Why some original identifiers remain
++
++`study_names.py` is the small public-to-archival mapping. Numerical workers
++still receive the original study IDs. The frozen seed files, run/model IDs,
++random-stream namespaces, panel IDs, saved scientific identities and expected
++hashes have not been renamed. In particular, changing a run ID that participates
++in random-stream addressing can change data even with an unchanged master seed.
++
++The seed records remain `protocol/step5_seed.json` and
++`protocol/step6_seed.json`. Historical QA logs and the bounded replay helpers
++retain their original labels so that their evidence is not silently rewritten.
++They refer to the two experiments above, not additional public run stages.
++
++Manuscript figure filenames such as `step6_length_performance_nominal90.pdf`
++and existing LaTeX labels are also retained for compatibility with the author's
++manuscript and figure checks. The drawing code, colours, numerical data mapping,
++and figure verification rules are unchanged.
++
++This edition changes the public naming layer only. It does not certify a new
++full reproduction. See `VALIDATION.md` and `checks/NAMING_QA.json` for the actual
++checks. Original experiment folders, packages and manuscript files are untouched.
